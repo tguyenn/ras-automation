@@ -24,13 +24,14 @@ If you hover over the left menu, you will see the following items:
     </td>
   </tr>
 </table>  
+  
 - **Executions**  
-  - History log of all script executions (fail/complete)  
+  - History of all script executions (fail/complete)  
   - This is where `Logger.log()` messages show when you click on a particular execution  
 
 - **Project Settings**  
-  - Important for enabling access to `appsscript.json` from the Editor  
-  - `appsscript.json` is crucial for script permission enabling  
+  - Important for enabling access to `appsscript.json`
+  - `appsscript.json` is for script permission enabling  
 
 ---
 
@@ -58,7 +59,7 @@ Our version builds on this repository by adding features like…
     - Pushing to Apps Scripts is dangerous because it irreversibly overwrites all the content there  
 - Each `.gs` file represents a module in the system (i.e. `Discord.gs` has code for publishing data to Discord)  
     - Each file should have a single function at the top to be called by `Main.gs` (i.e. `ESLForm.gs` has `getESLForm()`)  
-    - `Discord.gs` is only exception since it has another function (`killProcess()`) that should run when an error occurs  
+    - `Discord.gs` is only exception since it has another function (`killProcess()`) that logs an error message in Discord if an error occurs
 - Make sure to SAVE before expecting changes in script behavior (`CTRL + S`)  
 - `mainOnSubmit()` in `Main.gs` runs on form submission  
 - `CTRL + R` is very useful for prototyping because you don’t have to submit the form to run your code  
@@ -76,8 +77,6 @@ Our version builds on this repository by adding features like…
 
 - `sheetID` (in `EditMasterSheet.gs`’s `editMasterSheet()` function) specifies which Google Sheet to append data to and is retrieved from the Google Sheet URL  
   - `sheetID` is found between `/d/` and `/edit`.  
-
-- `inputSheetID` (in `ReadInputSheet.gs`’s `readSheet()`) gets read by parsing the Google Form’s answer to the file upload question  
 
 ---
 
